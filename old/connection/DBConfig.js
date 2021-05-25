@@ -4,8 +4,11 @@ const uri = "mongodb+srv://chessAi:chessAi@chesscluster.irhd7.mongodb.net/myFirs
 
 const db = mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true})
     // .then((r)=>console.log(r));
+
 mongoose.connection.on('connected', ()=>{
-    console.log("Connected")
+    // console.log(db.collection())
+    console.log(mongoose.Collection)
+    console.log("Connected!")
 });
 
 // console.log("hello", db)
